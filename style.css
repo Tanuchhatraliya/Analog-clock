@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color:  rgba(125, 192, 107, 0.64);
+}
+.bigcontainer{
+    width: 300px;
+    margin-left: 150px;
+}
+.time{
+    font-size: 5rem;
+    margin-top: 5rem;
+    
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 1px solid brown;
+    border-top: 1px solid brown;
+    }
+    .date{
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+    border-bottom: 1px solid rgb(73, 42, 165);
+    border-top: 1px solid rgb(42, 165, 50);
+    }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #212121;
+    background-image: url(https://wallpapercave.com/wp/wp5121979.png);
+    background-size: cover;
+}
+.container{
+    position: relative;
+}
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-image: url(https://pixel-creation.com/wp-content/uploads/http-www-bianoti-kali-linux-wallpaper-1366x768-html-fond-d-800x800.jpg);
+    background-size: cover;
+    border: 2px solid rgba(255,255,255,0.25);
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg*var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+.clock span b{
+    transform: rotate(calc(-30deg*var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+}
